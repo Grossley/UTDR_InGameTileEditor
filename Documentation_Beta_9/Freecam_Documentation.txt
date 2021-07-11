@@ -1,0 +1,9 @@
+Press "F" to enable freecam.
+
+After the freecam is enabled, these are available to use:
+Press "I" to zoom in closer to the room.
+Press "O" to zoom out further from the room.
+Use the arrow keys to pan the camera across the map.
+Press left click to place obj_mainchara at any location on the map.
+
+There is a small but possible chance of the game crashing due to dependent objects not being able to access obj_mainchara. Please report if such a bug occurs right away to Grossley#2869 on Discord.

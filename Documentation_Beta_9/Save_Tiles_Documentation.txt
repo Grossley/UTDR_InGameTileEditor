@@ -1,0 +1,17 @@
+If the directories new and original tile directories do not yet exist, they are created.
+Then, if the original tile file exists, the new tile file is written. Otherwise, the original tile file is written.
+If the background is valid (a valid tile) then the following data is saved, in this order, for each tile:
+Tile ID:
+Tile background:
+Tile left:
+Tile top:
+Tile width:
+Tile height:
+Tile X:
+Tile Y:
+Tile Depth:
+Tile X Scale:
+Tile Y Scale:
+Tile Alpha:
+Tile Color (Blend):
+Tile Visibility: 

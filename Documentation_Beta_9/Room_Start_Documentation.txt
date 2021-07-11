@@ -1,0 +1,5 @@
+If the new tile data exists for the room you are entering then it is loaded.
+Otherwise the default tile data is saved and loaded.
+If it is not generating the presets at first boot, the presets will be loaded.
+Otherwise, if it is, then all objects will be deactivated.
+If it is Undertale, "obj_screen" will then be re-activated to avoid crashes.

@@ -1,0 +1,1 @@
+If the left mouse button is pressed, the tile under mouse will be duplicated. When right is pressed, the duplicated tile can be dragged around.

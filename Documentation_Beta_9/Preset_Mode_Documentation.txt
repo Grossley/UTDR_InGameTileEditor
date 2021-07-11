@@ -1,0 +1,36 @@
+Add from preset mode: 
+
+If there is a valid preset for the room and no tiles are being added, a preview tile will appear where your mouse cursor is and will move with your mouse cursor.
+If the grid mode is activated, the tile will be aligned along the grid with your mouse.
+Otherwise, the tile will be at whatever position your mouse cursor is.
+Pressing various buttons has various effects:
+"P": Resets the preview tile.
+"6": Toggles the grid on or off. (in grid mode you can drag and place tiles instead of placing a single tile)
+"7": Increases the preset index by 1.
+"8": Decreases the preset index by 1.
+"9": Specify your own preset index.
+"0": Set the tile depth value (0 by default).
+
+Use left click to add tiles, right click to drag tiles.
+
+If the preset index is greater than the last valid preset, it will loop back, and vice versa.
+
+The following information will be on the screen:
+Total number of presets: This is the number of tiles that are available to place in a given room, both global and local.
+Background name: The background of the given preset.
+Currently selected preset: The index number of the current preset.
+Tile Preset Left: The X value of the top left corner of the preset tile (relative to the background from which it is from).
+Tile Preset Top: The Y value of the top left corner of the preset tile (relative to the background from which it is from).
+Tile Preset Width: The preset tile's width.
+Tile Preset Height: The preset tile's height.
+Tile Preset X SCALE: The X scale of the preset tile.
+Tile Preset Y SCALE: The Y scale of the preset tile.
+Tile Preset depth: The current user defined depth of the preset tile (0 by default).
+Tile Preset X Position: The X position at which the tile will be placed.
+Tile Preset Y Position: The Y position at which the tile will be placed.
+
+If the grid toggle is on, the cursor will be able to place tiles along the grid so long as the left mouse button is held.
+To correct a placement error, use the "Delete mode" (mode 03).
+If the grid toggle is off, the cursor will place one tile per mouse click at the location which you specify. 
+Additionally, you may re-grab and drag the tile (for tile adjustments) using the right mouse button.
+The tile will not be movable if you place down another tile after completing your adjustments. To move it further you will need to enter "Drag mode" (mode 1) to adjust it.

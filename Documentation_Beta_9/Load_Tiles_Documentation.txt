@@ -1,0 +1,21 @@
+If the new tile data for the game exists, then it will be loaded. Otherwise, the original tile data will be loaded. 
+If neither exist, an error will occur, forcing the game to stop.
+The following data is loaded, in this order, for each tile:
+Tile ID:
+Tile background:
+Tile left:
+Tile top:
+Tile width:
+Tile height:
+Tile X:
+Tile Y:
+Tile Depth:
+Tile X Scale:
+Tile Y Scale:
+Tile Alpha:
+Tile Color (Blend):
+Tile Visibility: 
+If no tile by the current tile ID exists, a new one is added.
+Then the background, visibility, alpha, blend (color), depth, region, scale, and position is set.
+
+Once loaded, the new tiles are checked against the original tiles. If a tile is missing from the new set that is present in the original set, a mismatch is indicated. The tile is then deleted from the room.

@@ -1,0 +1,2 @@
+If the preview tile exists, it will be deleted. 
+Your current unsaved changes will be preserved if you have not saved yet. Use "R" to restore them.

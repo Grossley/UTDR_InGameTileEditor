@@ -1,0 +1,21 @@
+After installation of the mod, the game will generate presets on first boot.
+The game will parse the game rooms for tile and preset data. 
+Preset data is generated on a room by room basis (the local scope) and for all rooms (the global scope).
+By default the "local and global" scope is used. This means you can use and interact with both tile data sets.
+This is required for functionality and will only occur once. 
+Weird visuals/audio may happen during this period. This is normal. 
+When it is complete, the game will restart and the tile editor will be available for use.
+
+How it works:
+Presets are saved to the "presets" folder in your save directory.
+Invalid tiles (based on having an invalid background property) will not be saved as a preset. 
+
+The following information is saved, in this order:
+
+Background: The background of the given preset.
+Tile Preset Left: The X value of the top left corner of the preset tile (relative to the background from which it is from).
+Tile Preset Top: The Y value of the top left corner of the preset tile (relative to the background from which it is from).
+Tile Preset Width: The preset tile's width.
+Tile Preset Height: The preset tile's height.
+Tile Preset X SCALE: The X scale of the preset tile.
+Tile Preset Y SCALE: The Y scale of the preset tile.

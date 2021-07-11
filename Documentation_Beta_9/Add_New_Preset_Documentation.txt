@@ -1,0 +1,15 @@
+Add new preset: 
+
+When you add a new preset, a preset with the following information will be added to the currently specified preset scope:
+Background: The background of the given preset.
+Tile Preset Left: The X value of the top left corner of the preset tile (relative to the background from which it is from).
+Tile Preset Top: The Y value of the top left corner of the preset tile (relative to the background from which it is from).
+Tile Preset Width: The preset tile's width.
+Tile Preset Height: The preset tile's height.
+Tile Preset X SCALE: The X scale of the preset tile.
+Tile Preset Y SCALE: The Y scale of the preset tile.
+
+The following information is not saved:
+Tile Preset depth: The current user defined depth of the preset tile (0 by default).
+
+Then the presets will be reloaded, including the new preset.

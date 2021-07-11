@@ -1,0 +1,35 @@
+The "Drag Mode" will allow you to do the following:
+1. Drag tiles.
+2. Tile transform tool.
+3. Set a preset.
+
+By default, selecting this mode will allow you to move tiles with your mouse unconstrained to any grid.
+
+If the left mouse button is held on a tile and then F5 is pressed, you are given a prompt asking "Would you like to use the tile transform tool?".
+If you select "YES", the tool will become enabled. Otherwise, it will remain disabled.
+After enabling the tool, you will have the option to either copy the current tile under cursor for tile transform or specify the values to use for tile transform manually.
+In manual specification, you will be prompted to fill in the following parameters: Visibility, Alpha, Color, Background, Depth, Tile Left, Tile Top, Tile Width, Tile Height, and X and Y scale.
+You have the option to not specify all parameters if you wish. This can be useful if you only want to overwrite one property of a tile. If you do not specify all parameters then the no changes regarding the unspecified parameters will take place.
+Otherwise, these parameters will be automatically filled from the currently selected tile.
+Then you will have the option to save this as a tile preset. If you select yes, these current settings will be saved as a preset both globally and locally. 
+Otherwise, the tile will not be added as a tile preset.
+
+If the tile transform tool is enabled, you will transform the tiles under your cursor to your specified settings when the left mouse button is held. Dragging is disabled while the tool is active.
+
+If you press F5 while the tile transform tool is active, you will be given a prompt asking "Would you like to disable the tile transform tool?".
+If you select "YES", the tile tool will be disabled. Otherwise it will remain enabled.
+Then you are given the following prompt: "Would you like to discard your tile transform settings? If you select NO you will be able to resume transforming tiles when you re-enable tile transform."
+If you select "NO" the transforming settings will be preserved for when you re-enable the tile transform tool. It will not be preserved through closing the game.
+If you select "YES" you are given the following prompt: "Would you like to save your settings as a tile preset?".
+If you then select "YES", the current settings will be saved as a tile preset.
+If any of the settings below were not defined, they will be filled in with their corresponding default values (left side: setting, right side: default value):
+Background: Index 0
+Left: 0
+Top: 0
+Width: 20 px
+Height: 20 px
+X SCALE: 1
+Y SCALE: 1
+Then the message "Tile added successfully. You can now access and use this tile in any room." will display.
+If you selected "NO", your settings will be fully discarded. 
+

@@ -1,0 +1,2 @@
+This mode will delete one tile under the cursor using the left mouse button. 
+To delete another tile, you must release the left mouse button and click again.

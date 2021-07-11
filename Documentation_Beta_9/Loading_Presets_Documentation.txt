@@ -1,0 +1,15 @@
+Presets are loaded by setting the scope. The local scope, if selected, will be reloaded upon entering a new room.  
+
+Presets for a particular room are loaded from "/presets/room_id.txt"
+Global presets are always loaded from "/presets/global.txt"
+
+The following information is loaded, in this order:
+
+Preset Index: The index number of the current preset.
+Preset Background: The background of the given preset.
+Tile Preset Left: The X value of the top left corner of the preset tile (relative to the background from which it is from).
+Tile Preset Top: The Y value of the top left corner of the preset tile (relative to the background from which it is from).
+Tile Preset Width: The preset tile's width.
+Tile Preset Height: The preset tile's height.
+Tile Preset X SCALE: The X scale of the preset tile.
+Tile Preset Y SCALE: The Y scale of the preset tile.
