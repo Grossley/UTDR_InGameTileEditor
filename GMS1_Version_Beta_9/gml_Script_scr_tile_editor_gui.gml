@@ -11,8 +11,11 @@ if (mode >= 1 && mode <= 30)
         preset_scope = "Local"
     if (write_preset_file_loc == "g")
         preset_scope = "Global"
-    draw_set_colour(c_white)
-    draw_set_font(font_to_use)
+    if (turn_off_text_for_Shesez == false)
+    {
+	    draw_set_colour(c_white)
+	    draw_set_font(font_to_use)
+    }
     str_to_show = 0
     str_to_show = array_create(19)
     str_to_show[0] = (((("Current room: " + room_get_name(room)) + " (") + string(room)) + ")")
@@ -41,14 +44,20 @@ if (mode >= 1 && mode <= 30)
         y_pos_tl = (y + (line_count * spacing))
         x_pos_br = (x_pos_tl + string_width(str_to_show[line_count]))
         y_pos_br = (y_pos_tl + string_height(str_to_show[line_count]))
-        draw_rectangle_colour(x_pos_tl, y_pos_tl, x_pos_br, y_pos_br, c_black, c_black, c_black, c_black, 0)
-        draw_text(x_pos_tl, y_pos_tl, string_hash_to_newline(str_to_show[line_count]))
-    }
+        if (turn_off_text_for_Shesez == false)
+        {
+	        draw_rectangle_colour(x_pos_tl, y_pos_tl, x_pos_br, y_pos_br, c_black, c_black, c_black, c_black, 0)
+	        draw_text(x_pos_tl, y_pos_tl, string_hash_to_newline(str_to_show[line_count]))
+	    }
+	}
 }
 else
 {
     current_mode = "None (Default mode)"
-    draw_set_colour(c_white)
-    draw_set_font(font_to_use)
-    draw_text(x, y, string_hash_to_newline((((("Current room: " + room_get_name(room)) + " (") + string(room)) + ")")))
+    if (turn_off_text_for_Shesez == false)
+    {
+	    draw_set_colour(c_white)
+	    draw_set_font(font_to_use)
+	    draw_text(x, y, string_hash_to_newline((((("Current room: " + room_get_name(room)) + " (") + string(room)) + ")")))
+    }
 }

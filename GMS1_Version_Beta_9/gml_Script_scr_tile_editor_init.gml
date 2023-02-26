@@ -1,5 +1,6 @@
 scr_get_font_to_use()
 mode = 0
+turn_off_text_for_Shesez = false
 preset_index = 0
 persistentid = -1
 stop = 0
