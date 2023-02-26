@@ -186,13 +186,13 @@ else if (mode == 25)
 }
 else if (mode == 26)
 {
-    current_mode = "(Unimplemented)"
-    scr_placeholder()
+    current_mode = "No-clip (F2 to toggle)"
+    scr_noclip()
 }
 else if (mode == 27)
 {
-    current_mode = "(Unimplemented)"
-    scr_placeholder()
+    current_mode = "One Punch Man Mode (Instantly kill any enemy?????)"
+    scr_onepunchman()
 }
 else if (mode == 28)
 {
