@@ -49,8 +49,8 @@ if keyboard_check_pressed(ord("F"))
         }
         if object_exists(asset_get_index("obj_caterpillarchara"))
             instance_deactivate_object(asset_get_index("obj_caterpillarchara"))
-        else
-            instance_deactivate_all(true)
+        //else
+        //    instance_deactivate_all(true)
         freecam = 1
     }
 }
