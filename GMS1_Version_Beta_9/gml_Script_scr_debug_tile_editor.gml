@@ -112,83 +112,12 @@ else if (mode == 10)
 else if (mode == 11)
 {
     current_mode = "FPS Toggle"
-    if keyboard_check_pressed(vk_f2)
-    {
-        if (room_speed == 30)
-            room_speed = 60
-        else if (room_speed == 60)
-            room_speed = 30
-        else
-            room_speed = 30
-    }
+    scr_fps_toggle()
 }
 else if (mode == 12)
 {
     current_mode = "Wipe all data (to pre-install state) and close game"
-    if keyboard_check_pressed(vk_f2)
-    {
-        if show_question("Are you sure? The game state will be reset to the state before install. This will destroy all of your custom data!")
-        {
-            if file_exists("destroyed")
-            {
-                for (i = 0; i <= 10; i++)
-                {
-                    savestate_filename = ("savestate" + string(i))
-                    if file_exists(savestate_filename)
-                        file_delete(savestate_filename)
-                }
-                if file_exists("go")
-                    file_delete("go")
-                if file_exists("halt")
-                    file_delete("halt")
-                if file_exists("waiting_music.ogg")
-                    file_delete("waiting_music.ogg")
-                if directory_exists(game_project_name + "_NEW")
-                    directory_destroy(game_project_name + "_NEW")
-                if directory_exists("DELETED_NEW")
-                    directory_destroy("DELETED_NEW")
-                if directory_exists(game_project_name + "_ORIG")
-                    directory_destroy(game_project_name + "_ORIG")
-                if directory_exists("presets")
-                    directory_destroy("presets")
-                if directory_exists("TEMP")
-                    directory_destroy("TEMP")
-                if directory_exists("tempsaves")
-                    directory_destroy("tempsaves")
-                show_message("All custom data destroyed. The game will now close.")
-                game_end()
-            }
-            else if show_question("This is your last chance, do not blame me if this somehow happened on accident! Click YES to wipe all data.")
-            {
-                for (i = 0; i <= 10; i++)
-                {
-                    savestate_filename = ("savestate" + string(i))
-                    if file_exists(savestate_filename)
-                        file_delete(savestate_filename)
-                }
-                if file_exists("go")
-                    file_rename("go", "destroyed")
-                if file_exists("halt")
-                    file_delete("halt")
-                if file_exists("waiting_music.ogg")
-                    file_delete("waiting_music.ogg")
-                if directory_exists("DELETED_NEW")
-                    directory_destroy("DELETED_NEW")
-                if directory_exists(game_project_name + "_NEW")
-                    directory_destroy(game_project_name + "_NEW")
-                if directory_exists(game_project_name + "_ORIG")
-                    directory_destroy(game_project_name + "_ORIG")
-                if directory_exists("presets")
-                    directory_destroy("presets")
-                if directory_exists("TEMP")
-                    directory_destroy("TEMP")
-                if directory_exists("tempsaves")
-                    directory_destroy("tempsaves")
-                show_message("All custom data destroyed. The game will now close.")
-                game_end()
-            }
-        }
-    }
+    scr_wipe_all_data()
 }
 else if (mode == 13)
 {
@@ -208,8 +137,7 @@ else if (mode == 15)
 else if (mode == 16)
 {
     current_mode = "Restart Game"
-    if keyboard_check_pressed(vk_return)
-        game_restart()
+    scr_restart_game()
 }
 else if (mode == 17)
 {
@@ -224,91 +152,32 @@ else if (mode == 18)
 else if (mode == 19)
 {
     current_mode = "Jump Rooms"
-    if keyboard_check_pressed(vk_up)
-        room_goto_next()
-    else if keyboard_check_pressed(vk_down)
-        room_goto_previous()
-    else if keyboard_check_pressed(vk_f2)
-        room_goto(get_integer("Enter room number", room))
+    scr_jump_rooms()
 }
 else if (mode == 20)
 {
     current_mode = "Debug Toggle"
-    if keyboard_check_pressed(vk_f2)
-    {
-        if (global.debug == 0)
-        {
-            if show_question("Debug mode may interfere with the usage of this tool. If you are OK with this and understand the potential key conflicts, select YES. Otherwise, select NO to abort the debug toggle.")
-            {
-                show_message("Debug mode has been enabled. If you wish to use debug mode standalone with minimal interference, please switch to mode 13.")
-                global.debug = 1
-            }
-        }
-        else
-        {
-            global.debug = 0
-            show_message("Debug mode has been disabled.")
-        }
-    }
+    scr_debug_toggle()
 }
 else if (mode == 21)
 {
     current_mode = "Free/Unstick player"
-    if keyboard_check_pressed(vk_f2)
-        global.interact = 0
+    scr_unstick()
 }
 else if (mode == 22)
 {
     current_mode = "Game Save/Load"
-    if keyboard_check_pressed(ord("S"))
-        scr_save()
-    if keyboard_check_pressed(ord("L"))
-        scr_load()
+    scr_game_saveload()
 }
 else if (mode == 23)
 {
     current_mode = "Save/Load a Game Savestate"
-    tile_count = ("Currently Selected Savestate Slot: " + string(current_savestate_slot))
-    if keyboard_check_pressed(ord("Q"))
-    {
-        current_savestate_slot += 1
-        if (current_savestate_slot > 10)
-            current_savestate_slot = 0
-    }
-    savestate_filename = ("savestate" + string(current_savestate_slot))
-    if keyboard_check_pressed(ord("S"))
-    {
-        if show_question("Changes to the data.win file will likely result in the savestate data becoming invalid. If you try to load invalid savestate the game will crash. If a savestate is invalid, please overwrite or delete it. If you understand this and wish to proceed, select YES.")
-            game_save(savestate_filename)
-    }
-    if keyboard_check_pressed(ord("0"))
-    {
-        if file_exists(savestate_filename)
-        {
-            if show_question("Would you like to delete the current savestate?")
-                file_delete(savestate_filename)
-        }
-        else
-            show_message("No savestate data to delete!")
-    }
-    if keyboard_check_pressed(ord("L"))
-    {
-        if file_exists(savestate_filename)
-            game_load(savestate_filename)
-        else
-            show_message("No savestate data to load!")
-    }
+    scr_savestate_saveload()
 }
 else if (mode == 24)
 {
     current_mode = "Stop all playing sounds using F2, adjust game volume using 9 and 0"
-    if keyboard_check_pressed(vk_f2)
-        audio_stop_all()
-    current_volume = audio_get_master_gain(0)
-    if keyboard_check(ord("9"))
-        audio_master_gain((current_volume + 0.01))
-    if keyboard_check(ord("0"))
-        audio_master_gain((current_volume - 0.01))
+	scr_stopsounds()
 }
 else if (mode >= 25)
 {
