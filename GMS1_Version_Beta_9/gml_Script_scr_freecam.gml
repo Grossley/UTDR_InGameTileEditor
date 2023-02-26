@@ -59,6 +59,7 @@ if keyboard_check_pressed(ord("F"))
             {
                 existed_obj_mainchara_fake = 1
                 instance_deactivate_object(asset_get_index("obj_mainchara_fake"))
+                show_message("The game will crash if you start the Flowey cutscene while freecam is active. There's nothing to see in this room, use is not recommended.")
             }
         }
         if object_exists(asset_get_index("obj_overworldc"))
@@ -141,15 +142,15 @@ if (freecam == 1)
         {
             if (existed_obj_mainchara)
             {
-	            instance_activate_object(asset_get_index("obj_mainchara"))
-	            mainchar_obj = asset_get_index("obj_mainchara")
-	            mainchar_obj.x = mouse_x
-	            mainchar_obj.y = mouse_y
-	            mainchar_obj.xprevious = mouse_x
-	            mainchar_obj.yprevious = mouse_y
-	            instance_deactivate_object(asset_get_index("obj_mainchara"))
-	        }
-	    }
+                instance_activate_object(asset_get_index("obj_mainchara"))
+                mainchar_obj = asset_get_index("obj_mainchara")
+                mainchar_obj.x = mouse_x
+                mainchar_obj.y = mouse_y
+                mainchar_obj.xprevious = mouse_x
+                mainchar_obj.yprevious = mouse_y
+                instance_deactivate_object(asset_get_index("obj_mainchara"))
+            }
+        }
         if (asset_get_index("obj_mainchara_fake") != -1)
         {
             if (existed_obj_mainchara_fake)
@@ -163,7 +164,7 @@ if (freecam == 1)
                 instance_deactivate_object(asset_get_index("obj_mainchara_fake"))
             }
         }
-	}
+    }
 }
 
 
