@@ -264,7 +264,7 @@ void MakeNewTile_GMS2(int room, int depth, int new_tile_x, int new_tile_y, int n
     // add a new tile to this list
     room_new_tiles.Layers[layer_to_use].AssetsData.LegacyTiles.Add(new UndertaleRoom.Tile 
     {
-        _SpriteMode = true,
+        spriteMode = true,
         X = new_tile_x,
         Y = new_tile_y,
         SpriteDefinition = Data.Sprites[sprite_id],
