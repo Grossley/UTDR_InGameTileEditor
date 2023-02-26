@@ -21,3 +21,7 @@ else
     orig_hview = view_hview[0]
     orig_wview = view_wview[0]
 }
+existed_obj_mainchara = -1
+existed_obj_mainchara_fake = -1
+existed_obj_overworldc = -1
+existed_obj_caterpillarchara = -1

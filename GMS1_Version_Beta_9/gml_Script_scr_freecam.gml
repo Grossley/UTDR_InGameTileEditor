@@ -12,6 +12,10 @@ if keyboard_check_pressed(ord("F"))
             if instance_exists(asset_get_index("obj_npc_marker"))
                 instance_destroy(asset_get_index("obj_npc_marker"))
         }
+        existed_obj_mainchara = -1
+        existed_obj_mainchara_fake = -1
+        existed_obj_overworldc = -1
+        existed_obj_caterpillarchara = -1
         instance_activate_all()
         if (asset_get_index("__view_set") != -1 && asset_get_index("__view_get") != -1)
         {
@@ -43,12 +47,36 @@ if keyboard_check_pressed(ord("F"))
         }
         if object_exists(asset_get_index("obj_mainchara"))
         {
-            instance_deactivate_object(asset_get_index("obj_mainchara"))
-            if object_exists(asset_get_index("obj_overworldc"))
+            if instance_exists(asset_get_index("obj_mainchara"))
+            {
+                existed_obj_mainchara = 1
+                instance_deactivate_object(asset_get_index("obj_mainchara"))
+            }
+        }
+        if object_exists(asset_get_index("obj_mainchara_fake"))
+        {
+            if instance_exists(asset_get_index("obj_mainchara_fake"))
+            {
+                existed_obj_mainchara_fake = 1
+                instance_deactivate_object(asset_get_index("obj_mainchara_fake"))
+            }
+        }
+        if object_exists(asset_get_index("obj_overworldc"))
+        {
+            if instance_exists(asset_get_index("obj_overworldc"))
+            {
+                existed_obj_overworldc = 1
                 instance_deactivate_object(asset_get_index("obj_overworldc"))
+            }
         }
         if object_exists(asset_get_index("obj_caterpillarchara"))
-            instance_deactivate_object(asset_get_index("obj_caterpillarchara"))
+        {
+            if instance_exists(asset_get_index("obj_caterpillarchara"))
+            {
+                existed_obj_caterpillarchara = 1
+                instance_deactivate_object(asset_get_index("obj_caterpillarchara"))
+            }
+        }
         //else
         //    instance_deactivate_all(true)
         freecam = 1
@@ -111,15 +139,31 @@ if (freecam == 1)
             scr_marker(mouse_x, mouse_y, asset_get_index("spr_maincharad"))
         if (asset_get_index("obj_mainchara") != -1)
         {
-            instance_activate_object(asset_get_index("obj_mainchara"))
-            mainchar_obj = asset_get_index("obj_mainchara")
-            mainchar_obj.x = mouse_x
-            mainchar_obj.y = mouse_y
-            mainchar_obj.xprevious = mouse_x
-            mainchar_obj.yprevious = mouse_y
-            instance_deactivate_object(asset_get_index("obj_mainchara"))
+            if (existed_obj_mainchara)
+            {
+	            instance_activate_object(asset_get_index("obj_mainchara"))
+	            mainchar_obj = asset_get_index("obj_mainchara")
+	            mainchar_obj.x = mouse_x
+	            mainchar_obj.y = mouse_y
+	            mainchar_obj.xprevious = mouse_x
+	            mainchar_obj.yprevious = mouse_y
+	            instance_deactivate_object(asset_get_index("obj_mainchara"))
+	        }
+	    }
+        if (asset_get_index("obj_mainchara_fake") != -1)
+        {
+            if (existed_obj_mainchara_fake)
+            {
+                instance_activate_object(asset_get_index("obj_mainchara_fake"))
+                mainchar_obj = asset_get_index("obj_mainchara_fake")
+                mainchar_obj.x = mouse_x
+                mainchar_obj.y = mouse_y
+                mainchar_obj.xprevious = mouse_x
+                mainchar_obj.yprevious = mouse_y
+                instance_deactivate_object(asset_get_index("obj_mainchara_fake"))
+            }
         }
-    }
+	}
 }
 
 
