@@ -20,6 +20,7 @@ These keys do the following in all modes:
 "U": Undoes your most recent action using the novel history tracking feature.
 "R": Redoes your most recent action using the novel history tracking feature.
 (Undo/Redo feature)
+"G": Turns off all text and other GUI stuff in the way of the game (yeah!!!!!!!!!!!!!!!!)
 
 If you exit a room without saving then re-enter, you can restore your most recent changes using "R" in order to save.
 

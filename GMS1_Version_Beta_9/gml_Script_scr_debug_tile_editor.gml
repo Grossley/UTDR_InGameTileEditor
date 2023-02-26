@@ -4,6 +4,10 @@ if (!file_exists("halt"))
     exit
 max_modes = 30
 mode_changed = 0
+if keyboard_check_pressed(ord("G"))
+{
+    turn_off_text_for_Shesez = (!turn_off_text_for_Shesez)
+}
 if keyboard_check_pressed(ord("1"))
 {
     mode += 1
