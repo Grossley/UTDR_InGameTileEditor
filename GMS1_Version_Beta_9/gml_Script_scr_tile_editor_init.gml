@@ -61,6 +61,7 @@ c_tile_depth = ""
 c_tile_x_pos = ""
 c_tile_y_pos = ""
 bulk_delete_enabled = 0
+delete_layer_enabled = 0
 strip_nan = 1
 if (!file_exists("waiting_music.ogg"))
 {

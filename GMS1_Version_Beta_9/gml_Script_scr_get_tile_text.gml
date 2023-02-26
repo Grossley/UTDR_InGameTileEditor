@@ -15,7 +15,7 @@ c_tile_x_pos = ""
 c_tile_y_pos = ""
 if tile_exists(persistentid)
 {
-    if (mode == 1 || mode == 3 || mode == 4)
+    if (mode == 1 || mode == 3 || mode == 4 || mode == 14 || mode == 15)
     {
         if (tile_get_mode == 0)
         {

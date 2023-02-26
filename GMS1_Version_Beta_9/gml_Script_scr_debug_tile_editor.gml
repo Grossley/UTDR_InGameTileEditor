@@ -197,8 +197,8 @@ else if (mode == 13)
 }
 else if (mode == 14)
 {
-    current_mode = "(Unimplemented)"
-    scr_group_delete()
+    current_mode = "Delete an entire layer at once"
+    scr_layer_delete()
 }
 else if (mode == 15)
 {

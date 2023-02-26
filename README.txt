@@ -41,7 +41,8 @@ Mode 09: Reset to Last Saved Custom Layout ("F2") (All editing history will be l
 Mode 10: Edit Existing Preset ("F2" to edit, "P": reset preview tile, "7": increase preset index, "8": decrease preset index, "9": specify preset index) 
 Mode 11: Toggle game FPS between 30 and 60 FPS ("F2" to toggle)
 Mode 12: Wipe all data to pre-install state and close game ("F2")
-Modes 13-14: UNIMPLEMENTED
+Mode 13: UNIMPLEMENTED
+Mode 14: Delete an entire layer at once (select tile with desired depth, then press "F2")
 Mode 15: Bulk Delete (Toggle with "F2", delete with the left mouse click)
 Mode 16: Restart Game ("Enter" will restart the game without warning)
 Mode 17: Delete Pre-Existing Preset ("F2" to delete) ("P": reset preview tile, "7": increase preset index, "8": decrease preset index, "9": specify preset index) 
