@@ -454,33 +454,33 @@ void SetUpTileEditor()
     ScriptMessage("Implement tile editor");
     var code = Data.GameObjects.ByName("obj_time");
     code.EventHandlerFor(EventType.Create, Data.Strings, Data.Code, Data.CodeLocals).AppendGML(@"
-    scr_tile_editor_init()
+scr_tile_editor_init()
     ", Data);
 
     var code1 = Data.Code.ByName("gml_Object_obj_time_Step_1");
     code1.AppendGML(@"
-    scr_tile_editor_room_parse()
-    scr_debug_tile_editor()
+scr_tile_editor_room_parse()
+scr_debug_tile_editor()
     ", Data);
 
     var code5 = Data.GameObjects.ByName("obj_time").EventHandlerFor(EventType.Draw, EventSubtypeDraw.DrawGUI, Data.Strings, Data.Code, Data.CodeLocals);
     code5.AppendGML(@"
-    scr_tile_editor_gui()
+scr_tile_editor_gui()
     ", Data);
 
     var code6 = Data.GameObjects.ByName("obj_time").EventHandlerFor(EventType.Draw, EventSubtypeDraw.Draw, Data.Strings, Data.Code, Data.CodeLocals);
     code6.AppendGML(@"
-    scr_tile_editor_draw()
+scr_tile_editor_draw()
     ", Data);
 
     var code3 = Data.GameObjects.ByName("obj_time").EventHandlerFor(EventType.Other, EventSubtypeOther.RoomStart, Data.Strings, Data.Code, Data.CodeLocals);
     code3.AppendGML(@"
-    scr_tile_editor_room_start()
+scr_tile_editor_room_start()
     ", Data);
 
     var code4 = Data.GameObjects.ByName("obj_time").EventHandlerFor(EventType.Other, EventSubtypeOther.RoomEnd, Data.Strings, Data.Code, Data.CodeLocals);
     code4.ReplaceGML(@"
-    scr_tile_editor_room_end()
+scr_tile_editor_room_end()
     ", Data);
 
     ChangeSelection(code4);

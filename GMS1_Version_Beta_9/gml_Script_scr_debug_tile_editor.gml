@@ -179,6 +179,26 @@ else if (mode == 24)
     current_mode = "Stop all playing sounds using F2, adjust game volume using 9 and 0"
 	scr_stopsounds()
 }
+else if (mode == 25)
+{
+    current_mode = "Invincibility in battle"
+    scr_invincibility()
+}
+else if (mode == 26)
+{
+    current_mode = "(Unimplemented)"
+    scr_placeholder()
+}
+else if (mode == 27)
+{
+    current_mode = "(Unimplemented)"
+    scr_placeholder()
+}
+else if (mode == 28)
+{
+    current_mode = "(Unimplemented)"
+    scr_placeholder()
+}
 else if (mode >= 25)
 {
     current_mode = "(Unimplemented)"

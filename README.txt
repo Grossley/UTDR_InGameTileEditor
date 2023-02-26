@@ -21,6 +21,7 @@ These keys do the following in all modes:
 "R": Redoes your most recent action using the novel history tracking feature.
 (Undo/Redo feature)
 "G": Turns off all text and other GUI stuff in the way of the game (yeah!!!!!!!!!!!!!!!!)
+???????? "5": Toggles mode switching on and off
 
 If you exit a room without saving then re-enter, you can restore your most recent changes using "R" in order to save.
 
@@ -53,6 +54,7 @@ Mode 21: Free/Unstick player ("F2" to unstick the player)
 Mode 22: Game Save/Load ("S" to save, "L" to load)
 Mode 23: Save/Load a Game Savestate ("S" to save, "L" to load, "Q" to change the savestate slot, "0" to delete) 
 Mode 24: Stop all playing sounds ("F2"), adjust game volume ("9" to increase, "0" to decrease)
+Mode 25: Makes you invincible in battle.
 Modes 25-30: UNIMPLEMENTED
 
 Preview tiles are available for all modes involving presets (modes 2, 8, 10, 17).
