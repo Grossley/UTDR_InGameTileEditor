@@ -1,4 +1,4 @@
-if keyboard_check_pressed(vk_f2)
+if keyboard_check_pressed(vk_f10)
 {
     global.interact = 0
     if (global.phasing == 0)

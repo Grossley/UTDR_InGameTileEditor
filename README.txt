@@ -4,6 +4,7 @@ Changes in Beta Version 6 (October 21st, 2020): Fixed a bug causing freecam to n
 Changes in Beta Version 7 (October 22nd, 2020): "gml_Script_tile_set_alpha.gml" was accidentally omitted, causing a bug. Fixed.
 Changes in Beta Version 8 (October 22nd, 2020): Quality of life improvements regarding games whose file names may have been changed or are otherwise not identifiable (such as for UndertaleBnP).
 Changes in Beta Version 9 (October 22nd, 2020): Borders are forcibly disabled to prevent incorrect mouse_x and mouse_y output (no idea why this happens).
+Changes in Beta Version 10 (February 26th, 2023): A lot of changes, addition of super freecam for Shesez.
 
 IT IS NOT RECOMMENDED TO USE THIS MOD WITH DEBUG MODE DUE TO KEY CONFLICTS. PLEASE DISABLE DEBUG MODE IF IT IS ENABLED.
 
@@ -48,14 +49,24 @@ Mode 15: Bulk Delete (Toggle with "F2", delete with the left mouse click)
 Mode 16: Restart Game ("Enter" will restart the game without warning)
 Mode 17: Delete Pre-Existing Preset ("F2" to delete) ("P": reset preview tile, "7": increase preset index, "8": decrease preset index, "9": specify preset index) 
 Mode 18: Clear Room Editing History ("F2")
-Mode 19: Jump Rooms (Arrow up to increase, arrow down to decrease, "F2" to manually specify room number)
+Mode 19: Jump Rooms (Arrow up to increase, arrow down to decrease, "F11" to manually specify room number)
 Mode 20: Debug Toggle ("F2" to toggle)
 Mode 21: Free/Unstick player ("F2" to unstick the player)
 Mode 22: Game Save/Load ("S" to save, "L" to load)
 Mode 23: Save/Load a Game Savestate ("S" to save, "L" to load, "Q" to change the savestate slot, "0" to delete) 
 Mode 24: Stop all playing sounds ("F2"), adjust game volume ("9" to increase, "0" to decrease)
 Mode 25: Makes you invincible in battle.
-Modes 25-30: UNIMPLEMENTED
+Mode 26: No-clip (F10 to toggle)
+Mode 27: One Punch Man Mode (Instantly kill any enemy)
+Mode 28: Toggle Run (Backspace to run, F3 to toggle).
+Mode 29: Super Freecam
+* Freecam (use F to toggle, I to zoom in, O to zoom out, arrows to move, click to place player object)
+* Boost player speed (able to run) in the overworld (F3 to toggle, Backspace to run)
+* Invincibility in battle (much higher HP) (F7 to activate)
+* Increased damage output (Instant 1 shot attacks on basically all enemies to 0 hp) (F8 to activate)
+* Teleport between rooms (Use while holding F9, press F11 to select a specific room, up and down arrow keys to increase/decrease room number respectively)
+* Walk through walls (F10 to toggle)
+Modes 30-40: UNIMPLEMENTED
 
 Preview tiles are available for all modes involving presets (modes 2, 8, 10, 17).
 
