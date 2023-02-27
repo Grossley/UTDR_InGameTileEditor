@@ -22,7 +22,8 @@ These keys do the following in all modes:
 "R": Redoes your most recent action using the novel history tracking feature.
 (Undo/Redo feature)
 "G": Turns off all text and other GUI stuff in the way of the game (yeah!!!!!!!!!!!!!!!!)
-???????? "5": Toggles mode switching on and off
+"F3": Turn on or off the preview tile.
+"F12": Go directly to a mode number.
 
 If you exit a room without saving then re-enter, you can restore your most recent changes using "R" in order to save.
 
@@ -58,10 +59,10 @@ Mode 24: Stop all playing sounds ("F2"), adjust game volume ("9" to increase, "0
 Mode 25: Makes you invincible in battle.
 Mode 26: No-clip (F10 to toggle)
 Mode 27: One Punch Man Mode (Instantly kill any enemy)
-Mode 28: Toggle Run (Backspace to run, F3 to toggle).
+Mode 28: Toggle Run (Backspace to run, F6 to toggle).
 Mode 29: Super Freecam
 * Freecam (use F to toggle, I to zoom in, O to zoom out, arrows to move, click to place player object)
-* Boost player speed (able to run) in the overworld (F3 to toggle, Backspace to run)
+* Boost player speed (able to run) in the overworld (F6 to toggle, Backspace to run)
 * Invincibility in battle (much higher HP) (F7 to activate)
 * Increased damage output (Instant 1 shot attacks on basically all enemies to 0 hp) (F8 to activate)
 * Teleport between rooms (Use while holding F9, press F11 to select a specific room, up and down arrow keys to increase/decrease room number respectively)

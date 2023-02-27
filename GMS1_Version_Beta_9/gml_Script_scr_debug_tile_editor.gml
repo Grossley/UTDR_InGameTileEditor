@@ -45,6 +45,8 @@ if keyboard_check_pressed(ord("M"))
 }
 if keyboard_check_pressed(vk_f3)
     preview_tiles_enabled = (!preview_tiles_enabled)
+if keyboard_check_pressed(vk_f12)
+    mode = get_integer("Enter mode number", 0)
 if (mode > max_modes)
     mode = 0
 else if (mode < 0)

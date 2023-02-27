@@ -1,4 +1,4 @@
-if keyboard_check_pressed(vk_f3)
+if keyboard_check_pressed(vk_f6)
 {
     global.interact = 0
     if (global.runtoggle == 0)
