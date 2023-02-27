@@ -127,7 +127,7 @@ else if (mode == 13)
 }
 else if (mode == 14)
 {
-    current_mode = "Delete an entire layer at once"
+    current_mode = "Delete an entire layer at once (F5)"
     scr_layer_delete()
 }
 else if (mode == 15)
@@ -187,7 +187,7 @@ else if (mode == 25)
 }
 else if (mode == 26)
 {
-    current_mode = "No-clip (F2 to toggle)"
+    current_mode = "No-clip (F10 to toggle)"
     scr_noclip()
 }
 else if (mode == 27)
@@ -197,7 +197,7 @@ else if (mode == 27)
 }
 else if (mode == 28)
 {
-    current_mode = "Toggle Run (Backspace to run, F2 to toggle)"
+    current_mode = "Toggle Run (Backspace to run, F6 to toggle)"
     scr_runtoggle()
 }
 else if (mode == 29)
