@@ -196,10 +196,10 @@ else if (mode == 27)
 }
 else if (mode == 28)
 {
-    current_mode = "(Unimplemented)"
-    scr_placeholder()
+    current_mode = "Toggle Run (Backspace to run, F2 to toggle)"
+    scr_runtoggle()
 }
-else if (mode >= 25)
+else if (mode >= 29)
 {
     current_mode = "(Unimplemented)"
     scr_placeholder()

@@ -483,7 +483,7 @@ scr_tile_editor_room_start()
 scr_tile_editor_room_end()
     ", Data);
     if (Data.Code.ByName("gml_Object_obj_mainchara_Step_0") != null)
-        ReplaceTextInGML("gml_Object_obj_mainchara_Step_0", "if (global.debug == true)", "if (global.debug == true || global.runtoggle == true), true, false);
+        ReplaceTextInGML("gml_Object_obj_mainchara_Step_0", "if (global.debug == true)", "if (global.debug == true || global.runtoggle == true)", true, false);
     ChangeSelection(code4);
     ScriptMessage("Tile editor added.");
 }
