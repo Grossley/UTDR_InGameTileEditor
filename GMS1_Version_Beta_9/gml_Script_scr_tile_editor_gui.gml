@@ -13,8 +13,8 @@ if (mode >= 1 && mode <= max_modes)
         preset_scope = "Global"
     if (turn_off_text_for_Shesez == false)
     {
-	    draw_set_colour(c_white)
-	    draw_set_font(font_to_use)
+        draw_set_colour(c_white)
+        draw_set_font(font_to_use)
     }
     str_to_show = 0
     str_to_show = array_create(19)
@@ -46,18 +46,18 @@ if (mode >= 1 && mode <= max_modes)
         y_pos_br = (y_pos_tl + string_height(str_to_show[line_count]))
         if (turn_off_text_for_Shesez == false)
         {
-	        draw_rectangle_colour(x_pos_tl, y_pos_tl, x_pos_br, y_pos_br, c_black, c_black, c_black, c_black, 0)
-	        draw_text(x_pos_tl, y_pos_tl, string_hash_to_newline(str_to_show[line_count]))
-	    }
-	}
+            draw_rectangle_colour(x_pos_tl, y_pos_tl, x_pos_br, y_pos_br, c_black, c_black, c_black, c_black, 0)
+            draw_text(x_pos_tl, y_pos_tl, string_hash_to_newline(str_to_show[line_count]))
+        }
+    }
 }
 else
 {
     current_mode = "None (Default mode)"
     if (turn_off_text_for_Shesez == false)
     {
-	    draw_set_colour(c_white)
-	    draw_set_font(font_to_use)
-	    draw_text(x, y, string_hash_to_newline((((("Current room: " + room_get_name(room)) + " (") + string(room)) + ")")))
+        draw_set_colour(c_white)
+        draw_set_font(font_to_use)
+        draw_text(x, y, string_hash_to_newline((((("Current room: " + room_get_name(room)) + " (") + string(room)) + ")")))
     }
 }

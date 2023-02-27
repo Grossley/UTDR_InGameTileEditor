@@ -178,7 +178,7 @@ else if (mode == 23)
 else if (mode == 24)
 {
     current_mode = "Stop all playing sounds using F2, adjust game volume using 9 and 0"
-	scr_stopsounds()
+    scr_stopsounds()
 }
 else if (mode == 25)
 {
