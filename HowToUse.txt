@@ -1,0 +1,87 @@
+How to use the tile editor:
+
+
+
+Part 1: Installing UndertaleModTool.
+
+1. Get UndertaleModTool from here: https://github.com/krzys-h/UndertaleModTool/releases/download/0.5.0.0/UndertaleModTool_v0.5.0.0-SingleFile.zip
+2. Unzip the folder to a new folder, and then open UndertaleModTool.exe
+
+
+
+
+
+
+Part 2: Setting up your modded game copy.
+
+3. Copy all of the files from the data.win directory (your Undertale installation) to another area for easy modding ability. To do this, follow these instructions:
+
+An easy way to find the data.win file is to do the following:
+a. Run the game
+b. Press CTRL+Alt+Delete
+c. Open task manager
+d. Right click the game and select "Open file location".
+e. The data.win will be in that directory.
+
+
+
+
+
+
+
+
+Part 3: Installing the Tile Editor with UndertaleModTool.
+
+4. In UndertaleModTool, select "File", then "Open", then select the data.win file you just copied. 
+5. Once it is done loading, go to "Scripts" at the top, and then select "Run other script...".
+6. Extract the contents of "UTDR_InGameTileEditor_Shezez.zip" to a new folder and then select "TileSetup.csx" from that new folder.
+7. Select "Yes" for "Would you like to set up the tile editor?".
+
+7. If debug mode is not enabled, select "No" for "Is debug mode enabled?". If it IS enabled, select "Yes", and then select "No" when it asks if you would like to continue.
+7a. Installing the tile editor on a fresh and unmodified copy of Undertale from Steam will ensure that debug mode will be off, in which case you would select "No".
+7b. Debug mode will seriously interfere with the intended use of this mod, but it is not enabled by default, and can only be turned on through modding the game. If for some reason you DID need to use debug mode, there is a mode for that in this mod, but again, it is not recommended.
+
+8. If you are using a normal Steam copy of Undertale, select the "GMS1_Version" folder when prompted. 
+
+IMPORTANT: You will need to select which version of GameMaker your game is based on when running "TileSetup.csx" in UndertaleModTool. 
+For Undertale on PC or Steam, use the GMS1 version. 
+For Undertale on Switch or any Deltarune (2018) version, use the GMS2 version.
+
+9. Advance through the further windows to complete installation. 
+
+
+
+
+
+
+
+
+
+
+
+Part 4: Saving
+
+10. To run the tile editor most easily, under the "File" menu, "Save" as "data_tiles.win", then use "Temp run game" (also under the "File" menu). 
+10a. For a more direct solution, rename the unmodified version to "data_original.win", rename "steam_api.dll" to "off.dll", then save your mod as "data.win". Then run "UNDERTALE.exe". It will immediately boot into the mod.
+
+
+
+
+
+
+
+
+
+
+Part 5: Initializing the tile editor on first run for use
+
+11. A window will appear which says the following: "The game will parse the game rooms for tile and preset data. This is required for functionality and will only occur once. Weird visuals/audio may happen during this period. This is normal. When it is complete, the game will close. Upon reopening the game, the tile editor will be available for use." Click OK.
+12. After approximately one minute, the Wii Shop theme will start playing. This is also normal and indicates that the tile editor is still doing initialization and to not close the game, as it has not frozen or crashed. This may last for a few minutes.
+13. After it is complete, a window will appear which says "Complete. The game will now close. Please reopen the game to use the tile editor.".
+
+
+
+
+
+Setup at this point is now complete. Run the tile editor again to use the mod. 
+For more instructions on how to use the mod at this point, please see "README.txt".
