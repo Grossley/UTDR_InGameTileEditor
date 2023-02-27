@@ -113,14 +113,14 @@ void ReplaceTiles()
                 if (option == 11)
                     tile_alpha = Decimal.Parse(line);
                 if (option == 12)
-				{
-					uint uintValue = Decimal.ToUInt32(Math.Ceiling(255 * tile_alpha));
-					string hexValue = uintValue.ToString("X2");
-					hexValue = hexValue + "000000";
-					uint uintAgain = uint.Parse(hexValue, System.Globalization.NumberStyles.HexNumber);
+                {
+                    uint uintValue = Decimal.ToUInt32(Math.Ceiling(255 * tile_alpha));
+                    string hexValue = uintValue.ToString("X2");
+                    hexValue = hexValue + "000000";
+                    uint uintAgain = uint.Parse(hexValue, System.Globalization.NumberStyles.HexNumber);
                     tile_blend = UInt32.Parse(line) + uintAgain;
                 }
-				if (option == 13)
+                if (option == 13)
                 {
                     tile_visible_determinant = Int32.Parse(line);
                     if (tile_visible_determinant == 1)
@@ -156,9 +156,9 @@ void ReplaceTiles()
                 counter++;
             }
             catch
-			{
+            {
                 ScriptMessage("Please send Grossley#2869 a screenshot of this message\r\nERROR IN THE FOLLOWING: \r\nRoom: " + room_counter.ToString() + "\r\nLine No: " + (counter+1).ToString() + "\r\nLine: " + line + "\r\nOption: " + option);
-			}
+            }
         }
         file.Close();
         UpdateProgress();
@@ -482,7 +482,8 @@ scr_tile_editor_room_start()
     code4.ReplaceGML(@"
 scr_tile_editor_room_end()
     ", Data);
-
+    if (Data.Code.ByName("gml_Object_obj_mainchara_Step_0") != null)
+        ReplaceTextInGML("gml_Object_obj_mainchara_Step_0", "if (global.debug == true)", "if (global.debug == true || global.runtoggle == true), true, false);
     ChangeSelection(code4);
     ScriptMessage("Tile editor added.");
 }
