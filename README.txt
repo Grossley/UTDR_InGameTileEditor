@@ -35,7 +35,7 @@ These keys do the following in all modes:
 
 If you exit a room without saving then re-enter, you can restore your most recent changes using "R" in order to save.
 
-There is currently a maximum of 30 modes. However, only modes 1 through 24 are implemented.
+There is currently a maximum of 40 modes. However, only modes 1 through 29 are implemented.
 To import your changes into UndertaleModTool, you MUST save your changes using mode 7. Then re-run "TileSetup.csx" and select "NO" when asked if you want to set up the tile editor.
 After importing your changes, it is recommended to use mode 12 (Wipe all data to pre-install state and close game) so that the tile and preset data can be re-created.
 
