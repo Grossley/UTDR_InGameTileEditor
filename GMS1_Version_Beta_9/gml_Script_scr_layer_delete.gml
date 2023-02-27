@@ -1,4 +1,4 @@
-if keyboard_check_pressed(vk_f2)
+if keyboard_check_pressed(vk_f5)
 {
     if (delete_layer_enabled == 0)
     {

@@ -45,23 +45,25 @@ Mode 10: Edit Existing Preset ("F2" to edit, "P": reset preview tile, "7": incre
 Mode 11: Toggle game FPS between 30 and 60 FPS ("F2" to toggle)
 Mode 12: Wipe all data to pre-install state and close game ("F2")
 Mode 13: UNIMPLEMENTED
-Mode 14: Delete an entire layer at once (select tile with desired depth, then press "F2")
+Mode 14: Delete an entire layer at once (Press "F5" to toggle, then select the tile with desired depth for destruction)
 Mode 15: Bulk Delete (Toggle with "F2", delete with the left mouse click)
 Mode 16: Restart Game ("Enter" will restart the game without warning)
 Mode 17: Delete Pre-Existing Preset ("F2" to delete) ("P": reset preview tile, "7": increase preset index, "8": decrease preset index, "9": specify preset index) 
 Mode 18: Clear Room Editing History ("F2")
 Mode 19: Jump Rooms (Arrow up to increase, arrow down to decrease, "F11" to manually specify room number)
 Mode 20: Debug Toggle ("F2" to toggle)
-Mode 21: Free/Unstick player ("F2" to unstick the player)
+Mode 21: Free/Unstick player (This can be necessary if you warp while talking to someone) ("F2" to unstick the player)
 Mode 22: Game Save/Load ("S" to save, "L" to load)
 Mode 23: Save/Load a Game Savestate ("S" to save, "L" to load, "Q" to change the savestate slot, "0" to delete) 
 Mode 24: Stop all playing sounds ("F2"), adjust game volume ("9" to increase, "0" to decrease)
-Mode 25: Makes you invincible in battle.
+Mode 25: Makes you invincible in battle (much higher HP).
 Mode 26: No-clip (F10 to toggle)
 Mode 27: One Punch Man Mode (Instantly kill any enemy)
 Mode 28: Toggle Run (Backspace to run, F6 to toggle).
 Mode 29: Super Freecam
 * Freecam (use F to toggle, I to zoom in, O to zoom out, arrows to move, click to place player object)
+* Toggle game FPS between 30 and 60 FPS ("F2" to toggle)
+* Delete an entire layer at once (Press "F5" to toggle, then select the tile with desired depth for destruction)
 * Boost player speed (able to run) in the overworld (F6 to toggle, Backspace to run)
 * Invincibility in battle (much higher HP) (F7 to activate)
 * Increased damage output (Instant 1 shot attacks on basically all enemies to 0 hp) (F8 to activate)
