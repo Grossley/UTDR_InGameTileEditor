@@ -2,7 +2,6 @@ scr_force_size()
 frame_skip += 1
 if (!file_exists("halt"))
     exit
-max_modes = 30
 mode_changed = 0
 if keyboard_check_pressed(ord("G"))
 {
@@ -199,7 +198,12 @@ else if (mode == 28)
     current_mode = "Toggle Run (Backspace to run, F2 to toggle)"
     scr_runtoggle()
 }
-else if (mode >= 29)
+else if (mode == 29)
+{
+    current_mode = "Super Freecam (See documentation for instructions)"
+    scr_superfreecam()
+}
+else if (mode >= 30)
 {
     current_mode = "(Unimplemented)"
     scr_placeholder()

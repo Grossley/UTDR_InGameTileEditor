@@ -1,5 +1,5 @@
 spacing = 16
-if (mode >= 1 && mode <= 30)
+if (mode >= 1 && mode <= max_modes)
 {
     if (tile_get_mode == 0)
         tile_get_mode_str = "Old"

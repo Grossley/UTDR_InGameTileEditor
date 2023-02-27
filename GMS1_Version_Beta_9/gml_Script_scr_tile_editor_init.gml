@@ -66,6 +66,7 @@ existed_obj_mainchara = -1
 existed_obj_mainchara_fake = -1
 existed_obj_overworldc = -1
 existed_obj_caterpillarchara = -1
+max_modes = 40
 global.runtoggle = false
 strip_nan = 1
 if (!file_exists("waiting_music.ogg"))
