@@ -8,6 +8,14 @@ Changes in Beta Version 10 (February 26th, 2023): A lot of changes, addition of 
 
 IT IS NOT RECOMMENDED TO USE THIS MOD WITH DEBUG MODE DUE TO KEY CONFLICTS. PLEASE DISABLE DEBUG MODE IF IT IS ENABLED.
 
+----------------------------------------------------------------------------------------------------
+
+IMPORTANT: You will need to select which version of GameMaker your game is based on when running "TileSetup.csx" in UndertaleModTool. 
+For Undertale on PC or Steam, use the GMS1 version. 
+For Deltarune or Undertale on Switch, use the GMS2 version.
+
+----------------------------------------------------------------------------------------------------
+
 The tile editor is not accessible during preset and tile creation.
 Please allow about 10 minutes for Undertale and 1-2 minutes for Deltarune to complete this creation process.
 After the process is complete the game must close. Please manually reopen the game to use the tile editor.
