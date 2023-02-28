@@ -205,7 +205,12 @@ else if (mode == 29)
     current_mode = "Super Freecam (See documentation for instructions)"
     scr_superfreecam()
 }
-else if (mode >= 30)
+else if (mode == 30)
+{
+    current_mode = "Inspect Room Properties"
+    scr_inspect_room()
+}
+else if (mode >= 31)
 {
     current_mode = "(Unimplemented)"
     scr_placeholder()

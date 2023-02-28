@@ -17,27 +17,37 @@ if (mode >= 1 && mode <= max_modes)
         draw_set_font(font_to_use)
     }
     str_to_show = 0
-    str_to_show = array_create(19)
-    str_to_show[0] = (((("Current room: " + room_get_name(room)) + " (") + string(room)) + ")")
-    str_to_show[1] = (((("Current mode: " + string(current_mode)) + " (") + string(mode)) + ")")
-    str_to_show[2] = ("Current preset scope: " + preset_scope)
-    str_to_show[3] = (((("Current tile get mode: " + string(tile_get_mode_str)) + " (") + string(tile_get_mode)) + ")")
-    str_to_show[4] = ("Total number of tiles: " + string(array_length_1d(tiles)))
-    str_to_show[5] = tile_count
-    str_to_show[6] = c_tile_id
-    str_to_show[7] = bg_name
-    str_to_show[8] = c_tile_left
-    str_to_show[9] = c_tile_top
-    str_to_show[10] = c_width
-    str_to_show[11] = c_height
-    str_to_show[12] = c_xscale
-    str_to_show[13] = c_yscale
-    str_to_show[14] = c_tile_alpha
-    str_to_show[15] = c_tile_blend
-    str_to_show[16] = c_tile_visible
-    str_to_show[17] = c_tile_depth
-    str_to_show[18] = c_tile_x_pos
-    str_to_show[19] = c_tile_y_pos
+    if (mode == 30)
+    {
+        str_to_show = 0
+        str_to_show = array_create(23)
+        scr_inspect_room()
+    }
+    else
+    {
+        str_to_show = 0
+        str_to_show = array_create(19)
+        str_to_show[0] = (((("Current room: " + room_get_name(room)) + " (") + string(room)) + ")")
+        str_to_show[1] = (((("Current mode: " + string(current_mode)) + " (") + string(mode)) + ")")
+        str_to_show[2] = ("Current preset scope: " + preset_scope)
+        str_to_show[3] = (((("Current tile get mode: " + string(tile_get_mode_str)) + " (") + string(tile_get_mode)) + ")")
+        str_to_show[4] = ("Total number of tiles: " + string(array_length_1d(tiles)))
+        str_to_show[5] = tile_count
+        str_to_show[6] = c_tile_id
+        str_to_show[7] = bg_name
+        str_to_show[8] = c_tile_left
+        str_to_show[9] = c_tile_top
+        str_to_show[10] = c_width
+        str_to_show[11] = c_height
+        str_to_show[12] = c_xscale
+        str_to_show[13] = c_yscale
+        str_to_show[14] = c_tile_alpha
+        str_to_show[15] = c_tile_blend
+        str_to_show[16] = c_tile_visible
+        str_to_show[17] = c_tile_depth
+        str_to_show[18] = c_tile_x_pos
+        str_to_show[19] = c_tile_y_pos
+    }
     for (line_count = 0; line_count < array_length_1d(str_to_show); line_count++)
     {
         x_pos_tl = x
