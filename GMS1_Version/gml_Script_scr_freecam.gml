@@ -30,6 +30,7 @@ if keyboard_check_pressed(ord("F"))
             view_wview[0] = orig_wview
             view_xview[0] = orig_xview
             view_yview[0] = orig_yview
+            view_object[0] = orig_following
         }
         freecam = 0
     }
@@ -50,7 +51,7 @@ if keyboard_check_pressed(ord("F"))
             if instance_exists(asset_get_index("obj_mainchara"))
             {
                 existed_obj_mainchara = 1
-                instance_deactivate_object(asset_get_index("obj_mainchara"))
+                //instance_deactivate_object(asset_get_index("obj_mainchara"))
             }
         }
         if object_exists(asset_get_index("obj_mainchara_fake"))
@@ -58,8 +59,8 @@ if keyboard_check_pressed(ord("F"))
             if instance_exists(asset_get_index("obj_mainchara_fake"))
             {
                 existed_obj_mainchara_fake = 1
-                instance_deactivate_object(asset_get_index("obj_mainchara_fake"))
-                show_message("The game will crash if you start the Flowey cutscene while freecam is active. There's nothing to see in this room, use is not recommended.")
+                //instance_deactivate_object(asset_get_index("obj_mainchara_fake"))
+                //show_message("The game will crash if you start the Flowey cutscene while freecam is active. There's nothing to see in this room, use is not recommended.")
             }
         }
         if object_exists(asset_get_index("obj_overworldc"))
@@ -67,7 +68,7 @@ if keyboard_check_pressed(ord("F"))
             if instance_exists(asset_get_index("obj_overworldc"))
             {
                 existed_obj_overworldc = 1
-                instance_deactivate_object(asset_get_index("obj_overworldc"))
+                //instance_deactivate_object(asset_get_index("obj_overworldc"))
             }
         }
         if object_exists(asset_get_index("obj_caterpillarchara"))
@@ -75,7 +76,7 @@ if keyboard_check_pressed(ord("F"))
             if instance_exists(asset_get_index("obj_caterpillarchara"))
             {
                 existed_obj_caterpillarchara = 1
-                instance_deactivate_object(asset_get_index("obj_caterpillarchara"))
+                //instance_deactivate_object(asset_get_index("obj_caterpillarchara"))
             }
         }
         //else
@@ -85,6 +86,7 @@ if keyboard_check_pressed(ord("F"))
 }
 if (freecam == 1)
 {
+    view_object[0] = noone
     zoom_mult_value = 0
     ypos_mult_value = 0
     xpos_mult_value = 0
@@ -134,34 +136,34 @@ if (freecam == 1)
             if instance_exists(asset_get_index("obj_npc_marker"))
                 instance_destroy(asset_get_index("obj_npc_marker"))
         }
-        if (asset_get_index("spr_krisd") != -1)
-            scr_marker(mouse_x, mouse_y, asset_get_index("spr_krisd"))
-        if (asset_get_index("spr_maincharad") != -1)
-            scr_marker(mouse_x, mouse_y, asset_get_index("spr_maincharad"))
+        //if (asset_get_index("spr_krisd") != -1)
+            //scr_marker(mouse_x, mouse_y, asset_get_index("spr_krisd"))
+        //if (asset_get_index("spr_maincharad") != -1)
+            //scr_marker(mouse_x, mouse_y, asset_get_index("spr_maincharad"))
         if (asset_get_index("obj_mainchara") != -1)
         {
             if (existed_obj_mainchara)
             {
-                instance_activate_object(asset_get_index("obj_mainchara"))
+                //instance_activate_object(asset_get_index("obj_mainchara"))
                 mainchar_obj = asset_get_index("obj_mainchara")
                 mainchar_obj.x = mouse_x
                 mainchar_obj.y = mouse_y
                 mainchar_obj.xprevious = mouse_x
                 mainchar_obj.yprevious = mouse_y
-                instance_deactivate_object(asset_get_index("obj_mainchara"))
+                //instance_deactivate_object(asset_get_index("obj_mainchara"))
             }
         }
         if (asset_get_index("obj_mainchara_fake") != -1)
         {
             if (existed_obj_mainchara_fake)
             {
-                instance_activate_object(asset_get_index("obj_mainchara_fake"))
+                //instance_activate_object(asset_get_index("obj_mainchara_fake"))
                 mainchar_obj = asset_get_index("obj_mainchara_fake")
                 mainchar_obj.x = mouse_x
                 mainchar_obj.y = mouse_y
                 mainchar_obj.xprevious = mouse_x
                 mainchar_obj.yprevious = mouse_y
-                instance_deactivate_object(asset_get_index("obj_mainchara_fake"))
+                //instance_deactivate_object(asset_get_index("obj_mainchara_fake"))
             }
         }
     }
