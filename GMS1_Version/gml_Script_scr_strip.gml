@@ -1,6 +1,6 @@
 audio_stop_all()
-new_aud_stream = audio_create_stream("waiting_music.ogg")
-audio_play_sound(new_aud_stream, 10, true)
+//new_aud_stream = audio_create_stream("waiting_music.ogg")
+//audio_play_sound(new_aud_stream, 10, true)
 directory_create("presets")
 for (room_no = 0; room_no <= room_last; room_no++)
 {
@@ -45,7 +45,7 @@ for (room_no = 0; room_no <= room_last; room_no++)
 scr_remove_data("presets/global.txt")
 scr_remove_nan("presets/global.txt")
 audio_stop_all()
-audio_destroy_stream(new_aud_stream)
+//audio_destroy_stream(new_aud_stream)
 for (room_no = 0; room_no <= room_last; room_no++)
 {
     overwrite_file = (("presets/" + string(room_no)) + ".txt")

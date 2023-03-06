@@ -14,8 +14,10 @@ if keyboard_check_pressed(vk_f2)
                 file_delete("go")
             if file_exists("halt")
                 file_delete("halt")
+			/*
             if file_exists("waiting_music.ogg")
                 file_delete("waiting_music.ogg")
+			*/
             if directory_exists(game_project_name + "_NEW")
                 directory_destroy(game_project_name + "_NEW")
             if directory_exists("DELETED_NEW")
@@ -43,8 +45,10 @@ if keyboard_check_pressed(vk_f2)
                 file_rename("go", "destroyed")
             if file_exists("halt")
                 file_delete("halt")
+			/*
             if file_exists("waiting_music.ogg")
                 file_delete("waiting_music.ogg")
+			*/
             if directory_exists("DELETED_NEW")
                 directory_destroy("DELETED_NEW")
             if directory_exists(game_project_name + "_NEW")

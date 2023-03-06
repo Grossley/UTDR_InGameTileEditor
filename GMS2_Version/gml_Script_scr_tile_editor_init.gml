@@ -61,11 +61,11 @@ c_tile_x_pos = ""
 c_tile_y_pos = ""
 bulk_delete_enabled = 0
 strip_nan = 1
-if (!file_exists("waiting_music.ogg"))
-{
-    wait = buffer_base64_decode(scr_get_custom_music())
-    buffer_save(wait, "waiting_music.ogg")
-}
+//if (!file_exists("waiting_music.ogg"))
+//{
+//    wait = buffer_base64_decode(scr_get_custom_music())
+//    buffer_save(wait, "waiting_music.ogg")
+//}
 frame_skip = 0
 if (!file_exists("halt"))
     instance_deactivate_all(true)
